@@ -250,7 +250,21 @@ body {
   font-size: 1.1rem;
 }
 
-/* Floating WhatsApp Quick Contact Button */
+/* Completely Hide Any Netlify Drawer, Badge, or Watermark */
+iframe#netlify-drawer,
+div#netlify-drawer,
+[data-netlify-drawer],
+.netlify-badge,
+a[href*="netlify.com"],
+div[class*="netlify"],
+iframe[src*="netlify.com"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 84px;
