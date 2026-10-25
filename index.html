@@ -21,6 +21,7 @@
     <li><a href="#gallery" data-t="n_gallery"></a></li>
     <li><a href="#faq" data-t="n_faq"></a></li>
   </ul>
+  <select class="lang" id="cur" aria-label="currency"></select>
   <button class="lang" id="lang" type="button">English</button>
   <a class="pill" href="#shop" data-t="n_order"></a>
 </div></header>
@@ -100,16 +101,37 @@
   <div><h4 data-t="ft_contact"></h4><a id="waF" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="https://instagram.com/la_luna_brand1" target="_blank" rel="noopener">@la_luna_brand1</a></div>
 </div><small>© <span id="y"></span> La Luna</small></footer>
 
+<div class="veil" id="veil" hidden></div>
+<form class="modal" id="modal" hidden novalidate>
+  <button class="x" type="button" id="mx" aria-label="close">×</button>
+  <h3 data-t="m_title"></h3>
+  <div class="sel" id="sel"></div>
+  <label><span data-t="m_name"></span><input name="name" autocomplete="name" required></label>
+  <label><span data-t="m_phone"></span><input name="phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" required></label>
+  <label><span data-t="m_addr"></span><input name="addr" autocomplete="street-address" required></label>
+  <label><span data-t="m_notes"></span><textarea name="notes" rows="2"></textarea></label>
+  <p class="err" id="err" hidden data-t="m_err"></p>
+  <button class="btn" type="submit" data-t="m_send"></button>
+</form>
+
 <a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
 
 <script>
 /* ===== Edit only this block ===== */
 const PHONE = "962788005060"; // WhatsApp, digits with country code
+/* Prices are set in Jordanian dinar; other currencies are converted with RATES (units per 1 JOD).
+   Update RATES when exchange rates change; "round" rounds each converted price. */
 const PKGS = [
-  {id:"single", img:"package_single.jpg", n:1, price:"18", old:"22"},
-  {id:"duo",    img:"package_duo.jpg",    n:2, price:"32", old:"40"},
-  {id:"trio",   img:"package_trio.jpg",   n:3, price:"50", old:"60"}
+  {id:"single", img:"package_single.jpg", n:1, price:18, old:22},
+  {id:"duo",    img:"package_duo.jpg",    n:2, price:36, old:40},
+  {id:"trio",   img:"package_trio.jpg",   n:3, price:50, old:60}
 ];
+const CURRENCIES = {
+  JOD:{flag:"🇯🇴", rate:1,      round:0.5,   ar:"دينار أردني",  en:"Jordanian dinar", sa:"د.أ", se:"JOD"},
+  USD:{flag:"🇺🇸", rate:1.41,   round:1,     ar:"دولار أمريكي", en:"US dollar",       sa:"$",   se:"$"},
+  LBP:{flag:"🇱🇧", rate:126000, round:10000, ar:"ليرة لبنانية", en:"Lebanese pound",  sa:"ل.ل", se:"LBP"},
+  SYP:{flag:"🇸🇾", rate:20600,  round:5000,  ar:"ليرة سورية",   en:"Syrian pound",    sa:"ل.س", se:"SYP"}
+};
 /* ================================= */
 
 const T={
@@ -129,7 +151,8 @@ const T={
   q3:"من يجب أن يستشير الطبيب أولًا؟",a3:"الحوامل والمرضعات ومن يعانون من أمراض مزمنة أو يتناولون أدوية، وكل من لديه حساسية تجاه أي مكوّن.",
   disc:"مكمل غذائي، لا يُستخدم لعلاج أو تشخيص أو الوقاية من أي مرض. النتائج تختلف من شخص لآخر. استشر طبيبك قبل الاستخدام.",
   ft_about:"مكمل HHS A1 عبر La Luna، والطلب عبر واتساب.",ft_shop:"تسوّق",ft_learn:"تعرّف",ft_contact:"تواصل",
-  jod:"د.أ",msg:(n)=>`مرحبًا La Luna، أرغب بطلب باقة HHS A1: ${n}`},
+  m_title:"أكمل بيانات الطلب",m_name:"الاسم",m_phone:"رقم الهاتف",m_addr:"العنوان / المدينة",m_notes:"ملاحظات (اختياري)",m_send:"أرسل الطلب عبر واتساب",m_err:"الرجاء تعبئة الاسم والهاتف والعنوان.",
+  msg:(o)=>`مرحبًا La Luna، أرغب بطلب HHS A1\nالباقة: ${o.pkg}\nالسعر: ${o.price}\nالاسم: ${o.name}\nالهاتف: ${o.phone}\nالعنوان: ${o.addr}`+(o.notes?`\nملاحظات: ${o.notes}`:"")},
  en:{n_shop:"Packages",n_about:"About",n_gallery:"Gallery",n_faq:"FAQ",n_order:"Order now",
   h_title:"Start your wellness routine with HHS A1.",h_sub:"Herbal slimming capsules with L-Carnitine and Lepidium to support your weight-loss plan. 30 capsules per box.",h_cta:"Order now",
   e_title:"Daily essentials for your wellness routine.",e_sub:"Choose a package and order directly on WhatsApp.",e_cta:"Learn more",
@@ -146,25 +169,54 @@ const T={
   q3:"Who should ask a doctor first?",a3:"Pregnant or nursing women, people with chronic conditions or on medication, and anyone allergic to an ingredient.",
   disc:"Food supplement. Not intended to treat, diagnose or prevent any disease. Results vary. Consult your doctor before use.",
   ft_about:"HHS A1 by La Luna, ordered on WhatsApp.",ft_shop:"Shop",ft_learn:"Learn",ft_contact:"Contact",
-  jod:"JOD",msg:(n)=>`Hello La Luna, I would like to order the HHS A1 package: ${n}`}
+  m_title:"Complete your order",m_name:"Name",m_phone:"Phone number",m_addr:"Address / city",m_notes:"Notes (optional)",m_send:"Send order on WhatsApp",m_err:"Please fill in your name, phone and address.",
+  msg:(o)=>`Hello La Luna, I would like to order HHS A1\nPackage: ${o.pkg}\nPrice: ${o.price}\nName: ${o.name}\nPhone: ${o.phone}\nAddress: ${o.addr}`+(o.notes?`\nNotes: ${o.notes}`:"")}
 };
-let lang="ar";
-try{lang=localStorage.getItem("a1_lang")||"ar"}catch(e){}
+let lang="ar",cur="JOD",chosen=null;
+try{lang=localStorage.getItem("a1_lang")||"ar";const c=localStorage.getItem("a1_cur");if(CURRENCIES[c])cur=c}catch(e){}
 const $=s=>document.querySelector(s);
 function render(){
   const d=T[lang];
   document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
   document.querySelectorAll("[data-t]").forEach(el=>el.textContent=d[el.dataset.t]);
   $("#lang").textContent=lang==="ar"?"English":"العربية";
+  $("#cur").innerHTML=Object.entries(CURRENCIES).map(([k,c])=>`<option value="${k}" ${k===cur?"selected":""}>${c.flag} ${lang==="ar"?c.ar:c.en}</option>`).join("");
   $("#tiles").innerHTML=PKGS.map(p=>{
     const name=d["p"+p.n];
-    const link="https://wa.me/"+PHONE+"?text="+encodeURIComponent(d.msg(name+" — "+p.price+" "+d.jod));
-    return `<div class="tile"><div class="im"><img src="assets/images/${p.img}" alt="${name}" loading="lazy"></div><div><h3>${name}</h3><small>${d.pn}</small><div class="price">${p.price} ${d.jod}<s>${p.old} ${d.jod}</s></div><a class="btn" href="${link}" target="_blank" rel="noopener">${d.order}</a></div></div>`;
+    return `<div class="tile" data-pkg="${p.id}" role="button" tabindex="0"><div class="im"><img src="assets/images/${p.img}" alt="${name}" loading="lazy"></div><div><h3>${name}</h3><small>${d.pn}</small><div class="price">${money(p.price)}<s>${money(p.old)}</s></div><span class="btn">${d.order}</span></div></div>`;
   }).join("");
+  if(chosen)renderSel();
   const wa="https://wa.me/"+PHONE;
   $("#wa").href=wa;$("#waF").href=wa;
   try{localStorage.setItem("a1_lang",lang)}catch(e){}
 }
+function money(jod){
+  const c=CURRENCIES[cur],v=Math.round(jod*c.rate/c.round)*c.round;
+  const n=v.toLocaleString("en-US",{maximumFractionDigits:1});
+  const s=lang==="ar"?c.sa:c.se;
+  return cur==="USD"?`$${n}`:`${n} ${s}`;
+}
+function renderSel(){
+  const d=T[lang],p=PKGS.find(x=>x.id===chosen);
+  $("#sel").innerHTML=`<img src="assets/images/${p.img}" alt=""><div><b>${d["p"+p.n]}</b><span>${money(p.price)}</span></div>`;
+}
+function openModal(id){chosen=id;renderSel();$("#err").hidden=true;$("#veil").hidden=false;$("#modal").hidden=false;$("#modal [name=name]").focus()}
+function closeModal(){chosen=null;$("#veil").hidden=true;$("#modal").hidden=true}
+document.addEventListener("click",e=>{const t=e.target.closest(".tile");if(t)openModal(t.dataset.pkg)});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape")closeModal();
+  if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("tile")){e.preventDefault();openModal(e.target.dataset.pkg)}
+});
+$("#mx").onclick=$("#veil").onclick=closeModal;
+$("#modal").onsubmit=e=>{
+  e.preventDefault();
+  const f=e.target,v=n=>f.elements[n].value.trim(),d=T[lang],p=PKGS.find(x=>x.id===chosen);
+  if(!v("name")||!v("phone")||!v("addr")){$("#err").hidden=false;return}
+  const text=d.msg({pkg:d["p"+p.n],price:money(p.price),name:v("name"),phone:v("phone"),addr:v("addr"),notes:v("notes")});
+  window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(text),"_blank","noopener");
+  f.reset();closeModal();
+};
+$("#cur").onchange=e=>{cur=e.target.value;try{localStorage.setItem("a1_cur",cur)}catch(x){}render()};
 $("#lang").onclick=()=>{lang=lang==="ar"?"en":"ar";render()};
 $("#y").textContent=new Date().getFullYear();
 render();
