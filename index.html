@@ -1,928 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta_title">HHS A1™ | مكمل التنحيف العشبي المتطور - حرق الدهون وشبع حتى 12 ساعة</title>
-  <meta name="description" content="الموقع الرسمي لمكمل التنحيف التركي الأصلي HHS A1 L-Carnitine Lepidium. بديل التكميم الطبيعي، حرق الدهون المستعصية، وشبع يدوم حتى 12 ساعة. اطلب الآن والدفع عند الاستلام.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HHS A1 | La Luna</title>
+<meta name="description" content="HHS A1 L-Carnitine Lepidium food supplement, ordered through WhatsApp. مكمل غذائي HHS A1 مع الطلب عبر واتساب.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar">
-    <span class="announcement-badge" data-i18n="announcement_badge">وكيل معتمد</span>
-    <span data-i18n="announcement">متوفر للطلب في الأردن ولبنان وسوريا مع دفع عند الاستلام! حسابنا: @la_luna_brand1</span>
-    <a href="https://instagram.com/la_luna_brand1" target="_blank" class="insta-brand-link" style="color: #fca5a5;">
-      <span>📷</span>
-      <span class="font-en-only">@la_luna_brand1</span>
-    </a>
-  </div>
+<header class="nav"><div class="wrap">
+  <a href="#" class="logo">HHS A1<sup>™</sup></a>
+  <ul>
+    <li><a href="#shop" data-t="n_shop"></a></li>
+    <li><a href="#about" data-t="n_about"></a></li>
+    <li><a href="#gallery" data-t="n_gallery"></a></li>
+    <li><a href="#faq" data-t="n_faq"></a></li>
+  </ul>
+  <button class="lang" id="lang" type="button">English</button>
+  <a class="pill" href="#shop" data-t="n_order"></a>
+</div></header>
 
-  <!-- Main Navigation Header (Seed-Inspired) -->
-  <header class="nav-header">
-    <div class="container">
-      <div class="nav-wrapper">
-        <!-- Logo -->
-        <a href="#" class="brand-logo">
-          <span class="brand-title">HHS A1<span class="sup">™</span></span>
-          <span class="brand-tag">LA LUNA</span>
-        </a>
+<main>
+  <section class="hero"><div class="wrap">
+    <h1 data-t="h_title"></h1>
+    <p data-t="h_sub"></p>
+    <a class="btn" href="#shop" data-t="h_cta"></a>
+  </div></section>
 
-        <!-- Desktop Navigation Links -->
-        <ul class="nav-menu">
-          <li><a href="#essentials" class="nav-link" data-i18n="nav_shop">الباقات والعروض</a></li>
-          <li><a href="#science" class="nav-link" data-i18n="nav_science">التركيبة والعلم</a></li>
-          <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">تجارب العملاء</a></li>
-          <li><a href="#faq" class="nav-link" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-        </ul>
-
-        <!-- Header Actions: Currency Selector, RTL/Language Switcher & CTA -->
-        <div class="nav-actions">
-          <!-- Currency Switcher Dropdown (Jordan, Lebanon, Syria, USD) -->
-          <div class="currency-selector-wrap">
-            <button id="currencyToggleBtn" class="currency-select-btn" title="اختيار العملة / Select Currency">
-              <span id="activeCurrencyLabel">🇯🇴 <span>د.أ</span></span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div id="currencyDropdown" class="currency-dropdown-menu">
-              <button class="currency-opt active" data-curr="JOD">
-                <span class="currency-flag">🇯🇴</span>
-                <span>دينار أردني (د.أ)</span>
-              </button>
-              <button class="currency-opt" data-curr="LBP">
-                <span class="currency-flag">🇱🇧</span>
-                <span>ليرة لبنانية (ل.ل)</span>
-              </button>
-              <button class="currency-opt" data-curr="SYP">
-                <span class="currency-flag">🇸🇾</span>
-                <span>ليرة سورية (ل.س)</span>
-              </button>
-              <button class="currency-opt" data-curr="USD">
-                <span class="currency-flag">🇺🇸</span>
-                <span>دولار ($25 USD)</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- RTL / LTR Language Toggle Button -->
-          <button id="langToggleBtn" class="lang-toggle-btn" title="تبديل اللغة / Switch Language">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <span id="langBtnText" data-i18n="lang_btn">English</span>
-          </button>
-
-          <!-- Order Now Header CTA -->
-          <button class="btn-primary trigger-order-modal" data-select-pkg="duo">
-            <span data-i18n="nav_order_btn">اطلب الآن</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
-        </div>
-      </div>
+  <section class="essentials" id="shop"><div class="wrap">
+    <div>
+      <h2 data-t="e_title"></h2>
+      <p class="sub" data-t="e_sub"></p>
+      <a class="btn solid" href="#about" data-t="e_cta"></a>
     </div>
-  </header>
+    <div class="tiles" id="tiles"></div>
+  </div></section>
 
-  <main>
-    <!-- HERO SECTION (Exact Seed.com Layout & Aesthetic) -->
-    <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <!-- Left Column: Copy & CTAs -->
-          <div class="hero-content">
-            <div class="hero-badge-pill">
-              <span data-i18n="hero_badge">التركيبة التركية الأصلية الأكثر طلباً 🌿</span>
-            </div>
+  <section class="band a" id="about"><div class="wrap">
+    <h2 data-t="a_title"></h2>
+    <p data-t="a_sub"></p>
+    <a class="btn" href="#faq" data-t="a_cta"></a>
+  </div></section>
 
-            <h1 class="hero-title" data-i18n="hero_title">
-              ابدأ رحلتك نحو القوام المثالي والصحة المتجددة.
-            </h1>
+  <section class="details wrap" id="details">
+    <h2 data-t="d_title"></h2>
+    <p class="sub" data-t="d_intro"></p>
+    <dl>
+      <div><dt data-t="d1k"></dt><dd data-t="d1v"></dd></div>
+      <div><dt data-t="d2k"></dt><dd data-t="d2v"></dd></div>
+      <div><dt data-t="d3k"></dt><dd data-t="d3v"></dd></div>
+      <div><dt data-t="d4k"></dt><dd data-t="d4v"></dd></div>
+      <div><dt data-t="d5k"></dt><dd data-t="d5v"></dd></div>
+      <div><dt data-t="d6k"></dt><dd data-t="d6v"></dd></div>
+    </dl>
+  </section>
 
-            <p class="hero-subtitle" data-i18n="hero_subtitle">
-              مكمل غذائي عشبي مبتكر يجمع بين قوة L-Carnitine وعشبة الليبيديوم (Maca) لحرق الدهون المتراكمة، تسريع الأيض، وتأمين شعور حقيقي بالشبع يدوم حتى 12 ساعة كاملة بدون خمول.
-            </p>
-
-            <div class="hero-cta-group">
-              <button class="btn-primary trigger-order-modal" data-select-pkg="duo" style="padding: 13px 28px; font-size: 1rem;">
-                <span data-i18n="hero_cta">اطلب كورس HHS A1 الآن</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </button>
-
-              <a href="#science" class="btn-secondary">
-                <span data-i18n="hero_secondary_cta">تعرف على آلية الحرق</span>
-              </a>
-            </div>
-
-            <div class="hero-trust-row">
-              <div class="trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span data-i18n="hero_trust_1">مكونات عشبية 100%</span>
-              </div>
-              <div class="trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span data-i18n="hero_trust_2">نتائج مثبتة بالتحارب</span>
-              </div>
-              <div class="trust-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span data-i18n="hero_trust_3">دفع آمن عند الاستلام</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: Cinematic Product & Real Capsules Hero Visual -->
-          <div class="hero-visual">
-            <div class="hero-image-frame">
-              <img src="assets/images/hero_seed.jpg?v=6" alt="HHS A1 Original Bottle with Silver Cap, Box and Real Herbal Capsules" loading="eager">
-              
-              <!-- Floating Glassmorphism Pill -->
-              <div class="hero-floating-pill">
-                <div class="floating-pill-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                </div>
-                <div>
-                  <div class="floating-pill-text" data-i18n="hero_pill_title">شبع مستمر حتى 12 ساعة</div>
-                  <div class="floating-pill-sub">العبوة الأصلية تحتوي على 30 كبسولة عشبية</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: Daily Essentials / Product Grid (Seed Layout) -->
-    <section class="essentials-section" id="essentials">
-      <div class="container">
-        <!-- Section Header Row -->
-        <div class="section-header-row">
-          <div class="section-title-wrap">
-            <span class="section-pretitle" data-i18n="section2_pretitle">الرعاية الحيوية اليومية</span>
-            <h2 class="section-title" data-i18n="section2_title">أساسيات يومية لدعم حرق الدهون، الشبع، والنشاط.</h2>
-            <p class="section-desc" data-i18n="section2_desc">تركيبة حيوية متكاملة مصممة علمياً لاستهداف الخلايا الدهنية وتحويلها إلى طاقة نقية تدوم طوال اليوم دون هبوط السكر أو اشتهاء السكريات.</p>
-          </div>
-          <button class="header-cta-btn trigger-order-modal" data-select-pkg="duo">
-            <span data-i18n="section2_cta">تسوق جميع الباقات</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <!-- 3 Product Cards Grid -->
-        <div class="essentials-grid">
-          <!-- Card 1: Starter Pack (1 Bottle + 1 Box) -->
-          <div class="product-card">
-            <span class="card-badge" data-i18n="card1_badge">للتجربة والبداية</span>
-            <div class="product-card-visual">
-              <img src="assets/images/package_single.jpg?v=6" alt="HHS A1 Single Bottle and Box Pack 30 Capsules on White Background" loading="lazy">
-            </div>
-            <div class="product-card-body">
-              <span class="product-code" data-i18n="card1_code">A1-SINGLE • كورس شهر واحد</span>
-              <h3 class="product-name" data-i18n="card1_title">عبوة A1 الفردية (30 كبسولة + الكرتونة)</h3>
-              
-              <div class="savings-ribbon">
-                <span>🏷️</span>
-                <span data-price="card1_save">وفر 4 د.أ (عرض البداية)</span>
-              </div>
-
-              <p class="product-desc" data-i18n="card1_desc">عبوة واحدة من كبسولات HHS A1 مع علبتها الأصلية. مثالية لبدء تنشيط عمليات الحرق، التخلص من احتباس السوائل وتنظيم الشهية اليومية.</p>
-              
-              <ul class="product-details-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card1_feat1">عبوة أصلية (30 كبسولة) + كرتونة المنتج</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card1_feat2">تنشيط فوري لمعدل الأيض اليومي</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card1_feat3">كبح الشهية والسكريات حتى 12 ساعة</span>
-                </li>
-              </ul>
-
-              <div class="product-card-footer">
-                <div class="price-box">
-                  <span class="price-current" data-price="card1">18 د.أ</span>
-                  <span class="price-old" data-price="card1_old">22 د.أ</span>
-                  <span class="unit-price-hint" data-price="card1_unit">18 د.أ / للعبوة</span>
-                </div>
-                <button class="btn-card-order trigger-order-modal" data-select-pkg="single">
-                  <span data-i18n="card_order_btn">اطلب الآن</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Featured Duo Pack (2 Bottles + 2 Boxes) -->
-          <div class="product-card featured">
-            <span class="card-badge" data-i18n="card2_badge">الأكثر مبيعاً 🔥</span>
-            <div class="product-card-visual">
-              <img src="assets/images/package_duo.jpg?v=6" alt="HHS A1 Duo Pack 2 Bottles and 2 Boxes on White Background" loading="lazy">
-            </div>
-            <div class="product-card-body">
-              <span class="product-code" data-i18n="card2_code">A1-DUO • كورس شهرين مكثف</span>
-              <h3 class="product-name" data-i18n="card2_title">باقة الحرق المكثف (عبوتان + كرتونتان - 60 كبسولة)</h3>
-              
-              <div class="savings-ribbon" style="background: #fef2f2; border-color: #fecaca; color: #991b1b;">
-                <span>🔥</span>
-                <span data-price="card2_save">خصم خاص • وفر 8 د.أ + شحن مجاني</span>
-              </div>
-
-              <p class="product-desc" data-i18n="card2_desc">عرض العبوتين الأكثر طلباً لمضاعفة حرق دهون البطن ونحت الخصر بأمان وفاعلية مضاعفة.</p>
-              
-              <ul class="product-details-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card2_feat1">عبوتان أصليتان (60 كبسولة) تكفي 60 يوماً</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card2_feat2">حرق عميق للدهون المستعصية في الخواصر</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card2_feat3">توصيل مجاني سريع حتى باب منزلك</span>
-                </li>
-              </ul>
-
-              <div class="product-card-footer">
-                <div class="price-box">
-                  <span class="price-current" data-price="card2">32 د.أ</span>
-                  <span class="price-old" data-price="card2_old">40 د.أ</span>
-                  <span class="unit-price-hint" data-price="card2_unit">16 د.أ فقط / للعبوة</span>
-                </div>
-                <button class="btn-card-order trigger-order-modal" data-select-pkg="duo">
-                  <span data-i18n="card_order_btn">اطلب الآن</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Trio Full Transformation (3 Bottles + 3 Boxes) -->
-          <div class="product-card">
-            <span class="card-badge" data-i18n="card3_badge">أفضل قيمة وتوفير 🏆</span>
-            <div class="product-card-visual">
-              <img src="assets/images/package_trio.jpg?v=6" alt="HHS A1 Trio Pack 3 Bottles and 3 Boxes on White Background" loading="lazy">
-            </div>
-            <div class="product-card-body">
-              <span class="product-code" data-i18n="card3_code">A1-TRIO • كورس النحت الكامل</span>
-              <h3 class="product-name" data-i18n="card3_title">باقة التحول الشامل (3 عبوات + 3 كراتين - 90 كبسولة)</h3>
-              
-              <div class="savings-ribbon" style="background: #eff6ff; border-color: #bfdbfe; color: #1e40af;">
-                <span>⭐</span>
-                <span data-price="card3_save">وفر 17.5 د.أ • كورس بديل التكميم الكامل</span>
-              </div>
-
-              <p class="product-desc" data-i18n="card3_desc">كورس النحت وتثبيت الوزن الكامل (3 أشهر متتالية) للوصول للوزن المثالي وتثبيته نهائياً بدون رجوع.</p>
-              
-              <ul class="product-details-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card3_feat1">3 عبوات كاملة (90 كبسولة) لـ 3 أشهر</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card3_feat2">تثبيت دائم للوزن ومنع عودة الدهون</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card3_feat3">هدية خاصة + شحن سريع مجاني</span>
-                </li>
-              </ul>
-
-              <div class="product-card-footer">
-                <div class="price-box">
-                  <span class="price-current" data-price="card3">42.5 د.أ</span>
-                  <span class="price-old" data-price="card3_old">60 د.أ</span>
-                  <span class="unit-price-hint" data-price="card3_unit">14.1 د.أ فقط / للعبوة (أقصى توفير)</span>
-                </div>
-                <button class="btn-card-order trigger-order-modal" data-select-pkg="trio">
-                  <span data-i18n="card_order_btn">اطلب الآن</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-            <div class="product-card-body">
-              <span class="product-code" data-i18n="card3_code">A1-TRIO • كورس النحت الكامل</span>
-              <h3 class="product-name" data-i18n="card3_title">باقة التحول الشامل (3 عبوات + 3 كراتين - 90 كبسولة)</h3>
-              
-              <div class="savings-ribbon" style="background: #eff6ff; border-color: #bfdbfe; color: #1e40af;">
-                <span>⭐</span>
-                <span data-price="card3_save">وفر 17.5 د.أ • كورس بديل التكميم الكامل</span>
-              </div>
-
-              <p class="product-desc" data-i18n="card3_desc">كورس النحت وتثبيت الوزن الكامل (3 أشهر متتالية) للوصول للوزن المثالي وتثبيته نهائياً بدون رجوع.</p>
-              
-              <ul class="product-details-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card3_feat1">3 عبوات كاملة (90 كبسولة) لـ 3 أشهر</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card3_feat2">تثبيت دائم للوزن ومنع عودة الدهون</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span data-i18n="card3_feat3">هدية خاصة + شحن سريع مجاني</span>
-                </li>
-              </ul>
-
-              <div class="product-card-footer">
-                <div class="price-box">
-                  <span class="price-current" data-price="card3">42.5 د.أ</span>
-                  <span class="price-old" data-price="card3_old">60 د.أ</span>
-                  <span class="unit-price-hint" data-price="card3_unit">14.1 د.أ فقط / للعبوة (أقصى توفير)</span>
-                </div>
-                <button class="btn-card-order trigger-order-modal" data-select-pkg="trio">
-                  <span data-i18n="card_order_btn">اطلب الآن</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: Deep Emerald Feature Banner (Seed Capsule Highlight) -->
-    <section class="deep-feature-section" id="science">
-      <div class="container">
-        <div class="feature-grid">
-          <!-- Text and Formula Highlights -->
-          <div class="feature-content">
-            <h2 class="feature-tagline">
-              <span data-i18n="feature_tagline_1">معظم كبسولات التنحيف تسبب خمولاً.</span>
-              <span data-i18n="feature_tagline_2">كبسولات A1 تمنحك شبعاً وطاقة 12 ساعة.</span>
-            </h2>
-            <p class="feature-lead" data-i18n="feature_lead">
-              تتميز كبسولات HHS A1 باحتوائها على مزيج دقيق من خلاصة جذور الليبيديوم المعززة للأندروفين والشبع، مع L-Carnitine فائق النقاوة الذي يوجه الأحماض الدهنية مباشرة إلى ميتوكوندريا الخلايا لتحترق كطاقة فورية.
-            </p>
-
-            <div class="ingredients-micro-grid">
-              <div class="ing-badge">
-                <div class="ing-icon">⚡</div>
-                <div>
-                  <h4 class="ing-title" data-i18n="feature_ing1_title">L-Carnitine النقي</h4>
-                  <p class="ing-desc" data-i18n="feature_ing1_desc">يحول الدهون المتراكمة إلى وقود خلوي ويحفز النشاط البدني.</p>
-                </div>
-              </div>
-
-              <div class="ing-badge">
-                <div class="ing-icon">🌱</div>
-                <div>
-                  <h4 class="ing-title" data-i18n="feature_ing2_title">خلاصة الليبيديوم (Maca)</h4>
-                  <p class="ing-desc" data-i18n="feature_ing2_desc">تنظم إشارات الجوع في الدماغ وتمنح شبعاً استثنائياً.</p>
-                </div>
-              </div>
-
-              <div class="ing-badge">
-                <div class="ing-icon">🍋</div>
-                <div>
-                  <h4 class="ing-title" data-i18n="feature_ing3_title">جارسينيا كامبوجيا</h4>
-                  <p class="ing-desc" data-i18n="feature_ing3_desc">تمنع تخزين الدهون الجديدة وتوازن مستويات المزاج.</p>
-                </div>
-              </div>
-
-              <div class="ing-badge">
-                <div class="ing-icon">💧</div>
-                <div>
-                  <h4 class="ing-title" data-i18n="feature_ing4_title">أعشاب طرد السموم والنفخة</h4>
-                  <p class="ing-desc" data-i18n="feature_ing4_desc">مزيج الشمر، الهال، والزنجبيل لإزالة السوائل المحتبسة والانتفاخ.</p>
-                </div>
-              </div>
-            </div>
-
-            <button class="btn-primary trigger-order-modal" data-select-pkg="duo">
-              <span data-i18n="feature_btn">اطلب باقتك المعتمدة</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-          </div>
-
-          <!-- Visual: 3D Master CGI Bottle & Glowing Floating Bio-Capsule -->
-          <div class="feature-capsule-display">
-            <div class="capsule-frame">
-              <img src="assets/images/hhs_a1_3d_master.jpg?v=6" alt="HHS A1 3D Master Authentic Bottle Floating in Dark Emerald Botanical Atmosphere" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: Instagram-Style Real User Testimonials -->
-    <section class="impact-section" id="reviews">
-      <div class="container">
-        <div class="impact-header">
-          <h2 class="section-title" data-i18n="impact_title">شاهد نتائج وتجارب عملائنا الحقيقية</h2>
-          <p class="section-desc" data-i18n="impact_subtitle">آراء وتقييمات من حسابات حقيقية شاركت تجاربها الفعلية مع كبسولات A1 الأصلية.</p>
-        </div>
-
-        <div class="insta-reviews-grid">
-          <!-- Insta Review Card 1 -->
-          <div class="insta-card">
-            <div class="insta-card-header">
-              <div class="insta-user-info">
-                <div class="insta-avatar-ring">
-                  <!-- Default Blank Instagram Profile Silhouette -->
-                  <div class="insta-avatar-blank">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="insta-user-meta">
-                  <div class="insta-username-row">
-                    <span class="font-en-only">@sara_otb24</span>
-                    <svg class="insta-badge-blue" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                  </div>
-                  <span class="insta-time" data-i18n="insta_time_1">منذ يومين • الرياض</span>
-                </div>
-              </div>
-              <span class="insta-more-btn">•••</span>
-            </div>
-
-            <div class="insta-card-body">
-              <div class="insta-stars-row">
-                <div class="insta-stars">★★★★★</div>
-                <span class="insta-result-pill" data-i18n="review1_meta">خسرت 11 كجم</span>
-              </div>
-              <p class="insta-text" data-i18n="review1_quote">"بديل حقيقي للتكميم بدون أي جراحة! فقدت 11 كيلوغراماً في شهر ونصف، والأهم أن الشهية مسدودة براحة تامة بدون صداع أو هبوط."</p>
-              <div class="insta-tags">
-                <span>#HHS_A1</span>
-                <span>#تجارب_حقيقية</span>
-                <span>#تنحيف_طبيعي</span>
-              </div>
-            </div>
-
-            <div class="insta-card-footer">
-              <div class="insta-actions-row">
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  <span>412</span>
-                </span>
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                  <span>29</span>
-                </span>
-              </div>
-              <span class="insta-verified-check">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span data-i18n="verified_buyer">مشترٍ موثق</span>
-              </span>
-            </div>
-          </div>
-
-          <!-- Insta Review Card 2 -->
-          <div class="insta-card">
-            <div class="insta-card-header">
-              <div class="insta-user-info">
-                <div class="insta-avatar-ring">
-                  <div class="insta-avatar-blank">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="insta-user-meta">
-                  <div class="insta-username-row">
-                    <span class="font-en-only">@m_shammari_fit</span>
-                    <svg class="insta-badge-blue" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                  </div>
-                  <span class="insta-time" data-i18n="insta_time_2">منذ 4 أيام • جدة</span>
-                </div>
-              </div>
-              <span class="insta-more-btn">•••</span>
-            </div>
-
-            <div class="insta-card-body">
-              <div class="insta-stars-row">
-                <div class="insta-stars">★★★★★</div>
-                <span class="insta-result-pill" data-i18n="review2_meta">خسر 16 كجم</span>
-              </div>
-              <p class="insta-text" data-i18n="review2_quote">"أعاني من ثبات الوزن لسنوات، لكن بعد أسبوعين من كبسولات A1 بدأ وزني ينزل بطريقة مذهلة وطاقتي بالنادي تضاعفت مع حرق دهون البطن."</p>
-              <div class="insta-tags">
-                <span>#حرق_الدهون</span>
-                <span>#دايت</span>
-                <span>#تحدي_A1</span>
-              </div>
-            </div>
-
-            <div class="insta-card-footer">
-              <div class="insta-actions-row">
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  <span>358</span>
-                </span>
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                  <span>18</span>
-                </span>
-              </div>
-              <span class="insta-verified-check">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span data-i18n="verified_buyer">مشترٍ موثق</span>
-              </span>
-            </div>
-          </div>
-
-          <!-- Insta Review Card 3 -->
-          <div class="insta-card">
-            <div class="insta-card-header">
-              <div class="insta-user-info">
-                <div class="insta-avatar-ring">
-                  <div class="insta-avatar-blank">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="insta-user-meta">
-                  <div class="insta-username-row">
-                    <span class="font-en-only">@noura_qahtani</span>
-                    <svg class="insta-badge-blue" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                  </div>
-                  <span class="insta-time" data-i18n="insta_time_3">منذ أسبوع • الدمام</span>
-                </div>
-              </div>
-              <span class="insta-more-btn">•••</span>
-            </div>
-
-            <div class="insta-card-body">
-              <div class="insta-stars-row">
-                <div class="insta-stars">★★★★★</div>
-                <span class="insta-result-pill" data-i18n="review3_meta">خسرت 9 كجم</span>
-              </div>
-              <p class="insta-text" data-i18n="review3_quote">"الشعور بالشبع يدوم من الصباح حتى المساء بدون أي مبالغة. انتهت مشكلة الأكل العاطفي واللقمشة في الليل نهائياً."</p>
-              <div class="insta-tags">
-                <span>#شبع_12_ساعة</span>
-                <span>#A1_الأصلي</span>
-              </div>
-            </div>
-
-            <div class="insta-card-footer">
-              <div class="insta-actions-row">
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  <span>520</span>
-                </span>
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                  <span>34</span>
-                </span>
-              </div>
-              <span class="insta-verified-check">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span data-i18n="verified_buyer">مشترٍ موثق</span>
-              </span>
-            </div>
-          </div>
-
-          <!-- Insta Review Card 4 -->
-          <div class="insta-card">
-            <div class="insta-card-header">
-              <div class="insta-user-info">
-                <div class="insta-avatar-ring">
-                  <div class="insta-avatar-blank">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="insta-user-meta">
-                  <div class="insta-username-row">
-                    <span class="font-en-only">@reem_harbi</span>
-                    <svg class="insta-badge-blue" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                  </div>
-                  <span class="insta-time" data-i18n="insta_time_4">منذ أسبوعين • أبها</span>
-                </div>
-              </div>
-              <span class="insta-more-btn">•••</span>
-            </div>
-
-            <div class="insta-card-body">
-              <div class="insta-stars-row">
-                <div class="insta-stars">★★★★★</div>
-                <span class="insta-result-pill" data-i18n="review4_meta">خسرت 13 كجم</span>
-              </div>
-              <p class="insta-text" data-i18n="review4_quote">"جربت منتجات كثيرة لكن A1 فريد جداً في نحت محيط الخصر وإزالة انتفاخ البطن. العبوة أصلية ومضمونة ووصلتني بسرعة."</p>
-              <div class="insta-tags">
-                <span>#نحت_الخصر</span>
-                <span>#رشاقة</span>
-                <span>#سعادة</span>
-              </div>
-            </div>
-
-            <div class="insta-card-footer">
-              <div class="insta-actions-row">
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  <span>467</span>
-                </span>
-                <span class="insta-action-btn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                  <span>41</span>
-                </span>
-              </div>
-              <span class="insta-verified-check">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span data-i18n="verified_buyer">مشترٍ موثق</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: Over 1 Million Transformations Banner (Seed Stats Style) -->
-    <section class="stats-banner-section">
-      <div class="container">
-        <div class="stats-container">
-          <h2 class="stats-title" data-i18n="stats_title">أكثر من 500,000 قصة نجاح مستمرة.</h2>
-          <p class="stats-subtitle" data-i18n="stats_subtitle">انضم إلى الآلاف من الذين غيروا حياتهم وتخلصوا من الوزن الزائد بطريقة طبيعية ومدروسة.</p>
-
-          <div class="stats-badges-row">
-            <span class="stat-pill">
-              <span>🌿</span>
-              <span data-i18n="stat_badge_1">مستخلصات نباتية تركية 100%</span>
-            </span>
-            <span class="stat-pill">
-              <span>🛡️</span>
-              <span data-i18n="stat_badge_2">مطابق لمواصفات الجودة GMP</span>
-            </span>
-            <span class="stat-pill">
-              <span>⚡</span>
-              <span data-i18n="stat_badge_3">شحن سريع خلال 24-48 ساعة</span>
-            </span>
-            <span class="stat-pill">
-              <span>⭐</span>
-              <span data-i18n="stat_badge_4">ضمان الجودة والأصالة</span>
-            </span>
-          </div>
-
-          <button class="btn-primary trigger-order-modal" data-select-pkg="duo" style="padding: 14px 34px; font-size: 1.05rem;">
-            <span data-i18n="stats_cta">ابدأ رحلة تحولك الآن</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6: FAQ Accordion -->
-    <section class="faq-section" id="faq">
-      <div class="container">
-        <div class="faq-container">
-          <h2 class="section-title" style="text-align: center; margin-bottom: 45px;" data-i18n="faq_title">الأسئلة الأكثر شيوعاً حول منتج HHS A1</h2>
-          
-          <div class="faq-item active">
-            <div class="faq-question">
-              <span data-i18n="faq_q1">كيف تعمل كبسولات A1 على سد الشهية وحرق الدهون؟</span>
-              <span class="faq-toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p data-i18n="faq_a1">تعمل الكبسولات بآلية مزدوجة: ألياف وخلاصة عشبة الليبيديوم الطبيعية تنظم هرمونات الشبع في الجهاز الهضمي لمدة تصل إلى 12 ساعة، بينما يقوم L-Carnitine بنقل الدهون المخزونة في الجسم إلى مراكز الطاقة لحرقها حتى في أوقات الراحة.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span data-i18n="faq_q2">ما هي طريقة الاستخدام الصحيحة للحصول على أفضل النتائج؟</span>
-              <span class="faq-toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p data-i18n="faq_a2">يتم تناول كبسولة واحدة يومياً صباحاً قبل وجبة الإفطار بنصف ساعة مع كوبين كبيرين من الماء الفاتر. يُنصح بشرب من 2.5 إلى 3 لتر ماء يومياً لتعزيز طرد السموم وحرق الدهون.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span data-i18n="faq_q3">هل هناك أي آثار جانبية أو أضرار؟</span>
-              <span class="faq-toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p data-i18n="faq_a3">المنتج مصنع من خلاصات عشبية طبيعية 100% وآمن لمعظم البالغين الأصحاء. لا يُنصح باستخدامه لمرضى القلب والضغط المرتفع الشديد، الحوامل، المرضعات، أو من هم دون 18 عاماً.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span data-i18n="faq_q4">متى تبدأ النتائج بالظهور وكم كيلوغرام يمكن خسارته؟</span>
-              <span class="faq-toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p data-i18n="faq_a4">يبدأ الإحساس بكبح الشهية من اليوم الأول للاستخدام، وتبدأ خسارة الوزن الملحوظة خلال 7 إلى 10 أيام. متوسط النزول المتوقع يتراوح بين 6 إلى 12 كجم شهرياً حسب استجابة الجسم ومستوى النشاط.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span data-i18n="faq_q5">كيف يتم الدفع واستلام الطلب؟</span>
-              <span class="faq-toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              <p data-i18n="faq_a5">نظام الدفع متاح 100% عند الاستلام (الدفع نقداً أو بالبطاقة لمندوب الشحن عند معاينة المنتج واستلامه)، ويتم التوصيل المباشر حتى باب منزلك.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Site Footer (Seed Exact Dark Forest Layout) -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-brand">
-          <div class="brand-title">HHS A1<span class="sup">™</span></div>
-          <p class="footer-desc" data-i18n="footer_desc">الوكيل المعتمد لمنتج التنحيف التركي HHS A1 الأصلي. حلول طبيعية علمية لصحة ورشاقة مستدامة.</p>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title" data-i18n="footer_col1_title">المنتجات</h4>
-          <ul class="footer-links">
-            <li><a href="#essentials" class="trigger-order-modal" data-select-pkg="single" data-i18n="card1_title">عبوة A1 الفردية</a></li>
-            <li><a href="#essentials" class="trigger-order-modal" data-select-pkg="duo" data-i18n="card2_title">باقة الحرق المكثف</a></li>
-            <li><a href="#essentials" class="trigger-order-modal" data-select-pkg="trio" data-i18n="card3_title">باقة التحول الشامل</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title" data-i18n="footer_col2_title">العلم والتركيبة</h4>
-          <ul class="footer-links">
-            <li><a href="#science">L-Carnitine</a></li>
-            <li><a href="#science">Lepidium Maca</a></li>
-            <li><a href="#science">Garcinia Cambogia</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title" data-i18n="footer_col3_title">خدمة العملاء</h4>
-          <ul class="footer-links">
-            <li><a href="#reviews" data-i18n="nav_reviews">تجارب العملاء</a></li>
-            <li><a href="#faq" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
-            <li><a href="https://wa.me/962788005060" target="_blank">واتساب: 962788005060+</a></li>
-            <li><a href="https://instagram.com/la_luna_brand1" target="_blank" class="font-en-only">Instagram: @la_luna_brand1</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title" data-i18n="footer_col4_title">الضمان والسياسات</h4>
-          <ul class="footer-links">
-            <li><a href="#">وكيل معتمد - لا لونا براند</a></li>
-            <li><a href="#">ضمان المنتج الأصلي 100%</a></li>
-            <li><a href="#">الدفع عند الاستلام</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p data-i18n="footer_rights">© 2026 La Luna Brand (@la_luna_brand1) • HHS A1™ جميع الحقوق محفوظة.</p>
-        <p style="color: #4ade80; font-weight: 600;">🌿 100% Herbal Formula • GMP Certified</p>
-      </div>
-
-      <p class="footer-disclaimer" data-i18n="footer_disclaimer">
-        تنويه: هذا المنتج عبارة عن مكمل غذائي عشبي وليس دواءً لعلاج أو تشخيص الأمراض. قد تختلف النتائج من شخص لآخر حسب طبيعة الجسم والالتزام بالإرشادات.
-      </p>
+  <section class="gallery wrap" id="gallery">
+    <h2 data-t="g_title"></h2>
+    <p class="sub" data-t="g_sub"></p>
+    <div class="gal">
+      <img src="assets/images/package_single.jpg" alt="HHS A1" loading="lazy">
+      <img src="assets/images/user_real_product_complete.jpg" alt="HHS A1 box and bottle" loading="lazy">
+      <img src="assets/images/package_trio.jpg" alt="HHS A1 trio" loading="lazy">
+      <img src="assets/images/hhs_a1_studio_authentic.jpg" alt="HHS A1 studio" loading="lazy">
     </div>
-  </footer>
+  </section>
 
-  <!-- Floating WhatsApp Quick Button (+962788005060) -->
-  <a href="https://wa.me/962788005060?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%84%D8%A7%20%D9%84%D9%88%D9%86%D8%A7%20%D8%A8%D8%B1%D8%A7%D9%86%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%D8%AA%D8%AC%20HHS%20A1%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A" target="_blank" class="floating-whatsapp-btn" title="تواصل عبر واتساب +962788005060">
-    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-  </a>
+  <section class="band b"><div class="wrap">
+    <h2 data-t="b_title"></h2>
+    <p data-t="b_sub"></p>
+    <a class="btn light" href="#shop" data-t="b_cta"></a>
+  </div></section>
 
-  <!-- ORDER MODAL / CHECKOUT POPUP -->
-  <div class="order-modal-backdrop" id="orderModalBackdrop">
-    <div class="order-modal">
-      <div class="modal-header">
-        <h3 class="modal-title" data-i18n="modal_title">إتمام طلب HHS A1 الأصلي</h3>
-        <button class="modal-close-btn" id="closeModalBtn" aria-label="Close">&times;</button>
-      </div>
+  <section class="facts"><div class="wrap"><div class="row" style="margin-top:50px">
+    <div class="fact"><b>30</b><span data-t="f1"></span></div>
+    <div class="fact"><b>L-Carnitine</b><span data-t="f2"></span></div>
+    <div class="fact"><b>Lepidium</b><span data-t="f3"></span></div>
+    <div class="fact"><b>WhatsApp</b><span data-t="f4"></span></div>
+  </div></div></section>
 
-      <div class="modal-body">
-        <form id="directOrderForm">
-          <!-- Step 1: Package Selection -->
-          <div class="form-group">
-            <label class="form-label" data-i18n="modal_step_pkg">اختر الباقة المناسبة لك:</label>
-            <div class="package-radio-group">
-              <!-- Single -->
-              <div class="package-radio-option" data-package="single">
-                <div class="pkg-info">
-                  <div class="pkg-radio-dot"></div>
-                  <div>
-                    <div class="pkg-name" data-i18n="card1_title">عبوة A1 الفردية (30 كبسولة + الكرتونة)</div>
-                    <div class="pkg-sub" data-i18n="card1_code">A1-SINGLE • كورس شهر واحد</div>
-                  </div>
-                </div>
-                <div class="pkg-price" data-modal-price="single">18 د.أ</div>
-              </div>
+  <section class="faq" id="faq">
+    <h2 data-t="q_title"></h2>
+    <details><summary data-t="q1"></summary><p data-t="a1"></p></details>
+    <details><summary data-t="q2"></summary><p data-t="a2"></p></details>
+    <details><summary data-t="q3"></summary><p data-t="a3"></p></details>
+  </section>
+  <p class="note" data-t="disc"></p>
+</main>
 
-              <!-- Duo (Default Selected) -->
-              <div class="package-radio-option selected" data-package="duo">
-                <div class="pkg-info">
-                  <div class="pkg-radio-dot"></div>
-                  <div>
-                    <div class="pkg-name" data-i18n="card2_title">باقة الحرق المكثف (عبوتان + كرتونتان)</div>
-                    <div class="pkg-sub" style="color: #16a34a; font-weight: 600;" data-i18n="card2_badge">الأكثر مبيعاً 🔥 (شحن مجاني)</div>
-                  </div>
-                </div>
-                <div class="pkg-price" data-modal-price="duo">32 د.أ</div>
-              </div>
+<footer><div class="wrap">
+  <div><div class="logo">HHS A1<sup>™</sup></div><p style="font-size:.8rem;max-width:240px" data-t="ft_about"></p></div>
+  <div><h4 data-t="ft_shop"></h4><a href="#shop" data-t="n_shop"></a></div>
+  <div><h4 data-t="ft_learn"></h4><a href="#about" data-t="n_about"></a><a href="#faq" data-t="n_faq"></a></div>
+  <div><h4 data-t="ft_contact"></h4><a id="waF" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="https://instagram.com/la_luna_brand1" target="_blank" rel="noopener">@la_luna_brand1</a></div>
+</div><small>© <span id="y"></span> La Luna</small></footer>
 
-              <!-- Trio -->
-              <div class="package-radio-option" data-package="trio">
-                <div class="pkg-info">
-                  <div class="pkg-radio-dot"></div>
-                  <div>
-                    <div class="pkg-name" data-i18n="card3_title">باقة التحول الشامل (3 عبوات + 3 كراتين)</div>
-                    <div class="pkg-sub" data-i18n="card3_badge">أفضل قيمة وتوفير (كورس بديل التكميم)</div>
-                  </div>
-                </div>
-                <div class="pkg-price" data-modal-price="trio">42.5 د.أ</div>
-              </div>
-            </div>
-          </div>
+<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
 
-          <!-- Step 2: Customer Shipping Details -->
-          <div class="form-group">
-            <label class="form-label" for="custName" data-i18n="label_fullname">الاسم الكامل *</label>
-            <input type="text" id="custName" class="form-input" required placeholder="أدخل اسمك الكريم" data-i18n-placeholder="placeholder_fullname">
-          </div>
+<script>
+/* ===== Edit only this block ===== */
+const PHONE = "962788005060"; // WhatsApp, digits with country code
+const PKGS = [
+  {id:"single", img:"package_single.jpg", n:1, price:"18", old:"22"},
+  {id:"duo",    img:"package_duo.jpg",    n:2, price:"32", old:"40"},
+  {id:"trio",   img:"package_trio.jpg",   n:3, price:"50", old:"60"}
+];
+/* ================================= */
 
-          <div class="form-group">
-            <label class="form-label" for="custPhone" data-i18n="label_phone">رقم الهاتف / واتساب *</label>
-            <input type="tel" id="custPhone" class="form-input" required placeholder="مثال: 05XXXXXXXX" data-i18n-placeholder="placeholder_phone" dir="ltr">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="custCity" data-i18n="label_city">المدينة وعنوان التوصيل *</label>
-            <input type="text" id="custCity" class="form-input" required placeholder="المدينة، الحي، اسم الشارع" data-i18n-placeholder="placeholder_city">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="custNotes" data-i18n="label_notes">ملاحظات إضافية (اختياري)</label>
-            <textarea id="custNotes" class="form-textarea" rows="2" placeholder="أي تفاصيل تخص موعد التوصيل المفضل..." data-i18n-placeholder="placeholder_notes"></textarea>
-          </div>
-
-          <!-- Order Summary Box -->
-          <div class="order-summary-box">
-            <div class="order-row">
-              <span data-i18n="summary_product">المنتج المختار:</span>
-              <strong id="summaryPkgName">باقة الحرق المكثف (عبوتان)</strong>
-            </div>
-            <div class="order-row">
-              <span data-i18n="summary_shipping">الشحن والتوصيل:</span>
-              <strong style="color: #16a34a;" data-i18n="summary_shipping_free">مجاني بالكامل (0 ر.س)</strong>
-            </div>
-            <div class="order-row total">
-              <span data-i18n="summary_total">المجموع الكلي:</span>
-              <span id="summaryTotalPrice" style="color: #25533d;">349 ر.س</span>
-            </div>
-          </div>
-
-          <!-- Payment Method Pill -->
-          <div class="payment-method-pill">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-            <span data-i18n="summary_payment_val">الدفع نقداً أو شبكة عند الاستلام (آمن ومضمون 100%)</span>
-          </div>
-
-          <button type="submit" class="btn-submit-order">
-            <span data-i18n="btn_confirm_order">تأكيد الطلب الآن (الدفع عند الاستلام)</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile Sticky Bottom Quick Order Bar -->
-  <div class="mobile-sticky-bar">
-    <div class="mobile-sticky-inner">
-      <div class="mobile-sticky-info">
-        <span class="mobile-sticky-name" data-i18n="card2_title">باقة الحرق المكثف</span>
-        <span class="mobile-sticky-price" data-i18n="card2_price">349 ر.س (شحن مجاني)</span>
-      </div>
-      <button class="mobile-sticky-btn trigger-order-modal" data-select-pkg="duo">
-        <span data-i18n="nav_order_btn">اطلب الآن</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+const T={
+ ar:{n_shop:"الباقات",n_about:"عن المنتج",n_gallery:"المعرض",n_faq:"أسئلة شائعة",n_order:"اطلب الآن",
+  h_title:"ابدأ روتينك الصحي مع HHS A1.",h_sub:"كبسولات عشبية للتنحيف بتركيبة L-Carnitine و Lepidium، لدعم برنامجك لإنقاص الوزن. 30 كبسولة في العبوة.",h_cta:"اطلب الآن",
+  e_title:"أساسيات يومية ضمن روتينك الصحي.",e_sub:"اختر الباقة المناسبة واطلب مباشرة عبر واتساب.",e_cta:"اعرف أكثر",
+  p1:"عبوة واحدة",p2:"عبوتان",p3:"ثلاث عبوات",pn:"30 كبسولة لكل عبوة",order:"اطلب عبر واتساب",
+  a_title:"مكمل غذائي بتركيبة عشبية.",a_sub:"HHS A1 يحتوي على L-Carnitine و Lepidium في كبسولات عشبية، ويُستخدم ضمن نمط حياة متوازن.",a_cta:"أسئلة شائعة",
+  d_title:"وصف المنتج",d_intro:"HHS A1 كبسولات عشبية تركية للتنحيف، تجمع بين L-Carnitine المعروف بدوره في تحويل الدهون إلى طاقة، وعشبة Lepidium (الماكا) المعروفة بدعم النشاط والحيوية. صُمّمت لتدعم برنامجك لإنقاص الوزن عند اتباع حمية متوازنة وممارسة الرياضة. النتائج تختلف من شخص لآخر، والمنتج مصنّف مكمّلًا غذائيًا وليس دواءً.",
+  d1k:"الاسم",d1v:"HHS A1 L-Carnitine Lepidium",d2k:"الشكل",d2v:"كبسولات عشبية، 30 كبسولة في العبوة",d3k:"المكونات المذكورة على العبوة",d3v:"L-Carnitine و Lepidium",
+  d4k:"بلد الصنع",d4v:"تركيا (Bitkisel Ürünler)",d5k:"الفئة حسب العبوة",d5v:"Takviye Edici Gıda، أي مكمل غذائي",d6k:"تنبيهات",d6v:"لا يُستعمل مع وجود حساسية من أي مكوّن. غير مناسب للحوامل والمرضعات ولمن لديهم أمراض القلب أو الضغط إلا بعد استشارة الطبيب.",
+  g_title:"المنتج عن قرب",g_sub:"صور العبوة والكبسولات.",
+  b_title:"اطلب خلال دقائق.",b_sub:"اختر الباقة، أرسل الطلب في واتساب، ونرد عليك لتأكيد التفاصيل والتوصيل.",b_cta:"اختر باقتك",
+  f1:"كبسولة في العبوة",f2:"المكوّن الأول",f3:"المكوّن العشبي",f4:"الطلب والمتابعة",
+  q_title:"أسئلة شائعة",q1:"كيف أطلب؟",a1:"اختر الباقة واضغط \"اطلب عبر واتساب\"، فتصلنا رسالة جاهزة بالباقة المختارة ونؤكد معك الطلب.",
+  q2:"هل المنتج دواء؟",a2:"لا. هو مكمل غذائي ولا يُغني عن الدواء أو عن الاستشارة الطبية.",
+  q3:"من يجب أن يستشير الطبيب أولًا؟",a3:"الحوامل والمرضعات ومن يعانون من أمراض مزمنة أو يتناولون أدوية، وكل من لديه حساسية تجاه أي مكوّن.",
+  disc:"مكمل غذائي، لا يُستخدم لعلاج أو تشخيص أو الوقاية من أي مرض. النتائج تختلف من شخص لآخر. استشر طبيبك قبل الاستخدام.",
+  ft_about:"مكمل HHS A1 عبر La Luna، والطلب عبر واتساب.",ft_shop:"تسوّق",ft_learn:"تعرّف",ft_contact:"تواصل",
+  jod:"د.أ",msg:(n)=>`مرحبًا La Luna، أرغب بطلب باقة HHS A1: ${n}`},
+ en:{n_shop:"Packages",n_about:"About",n_gallery:"Gallery",n_faq:"FAQ",n_order:"Order now",
+  h_title:"Start your wellness routine with HHS A1.",h_sub:"Herbal slimming capsules with L-Carnitine and Lepidium to support your weight-loss plan. 30 capsules per box.",h_cta:"Order now",
+  e_title:"Daily essentials for your wellness routine.",e_sub:"Choose a package and order directly on WhatsApp.",e_cta:"Learn more",
+  p1:"1 box",p2:"2 boxes",p3:"3 boxes",pn:"30 capsules per box",order:"Order on WhatsApp",
+  a_title:"A food supplement with an herbal formula.",a_sub:"HHS A1 contains L-Carnitine and Lepidium in herbal capsules, to be used within a balanced lifestyle.",a_cta:"FAQ",
+  d_title:"Product description",d_intro:"HHS A1 is a Turkish herbal slimming capsule that combines L-Carnitine, known for its role in turning fat into energy, with Lepidium (maca), known for supporting energy and vitality. It is designed to support your weight-loss plan alongside a balanced diet and regular exercise. Results vary from person to person, and the product is classed as a food supplement, not a medicine.",
+  d1k:"Name",d1v:"HHS A1 L-Carnitine Lepidium",d2k:"Form",d2v:"Herbal capsules, 30 per box",d3k:"Ingredients on the box",d3v:"L-Carnitine and Lepidium",
+  d4k:"Made in",d4v:"Turkey (Bitkisel Ürünler)",d5k:"Category on the box",d5v:"Takviye Edici Gıda, a food supplement",d6k:"Cautions",d6v:"Do not use if allergic to any ingredient. Not suitable for pregnant or nursing women, or people with heart or blood pressure conditions, without a doctor's advice.",
+  g_title:"The product up close",g_sub:"The box and the capsules.",
+  b_title:"Order in minutes.",b_sub:"Pick a package, send the order on WhatsApp, and we reply to confirm details and delivery.",b_cta:"Choose a package",
+  f1:"capsules per box",f2:"Key ingredient",f3:"Herbal ingredient",f4:"Ordering & support",
+  q_title:"Frequently asked questions",q1:"How do I order?",a1:"Choose a package and press \"Order on WhatsApp\". A ready message reaches us and we confirm with you.",
+  q2:"Is it a medicine?",a2:"No. It is a food supplement and does not replace medication or medical advice.",
+  q3:"Who should ask a doctor first?",a3:"Pregnant or nursing women, people with chronic conditions or on medication, and anyone allergic to an ingredient.",
+  disc:"Food supplement. Not intended to treat, diagnose or prevent any disease. Results vary. Consult your doctor before use.",
+  ft_about:"HHS A1 by La Luna, ordered on WhatsApp.",ft_shop:"Shop",ft_learn:"Learn",ft_contact:"Contact",
+  jod:"JOD",msg:(n)=>`Hello La Luna, I would like to order the HHS A1 package: ${n}`}
+};
+let lang="ar";
+try{lang=localStorage.getItem("a1_lang")||"ar"}catch(e){}
+const $=s=>document.querySelector(s);
+function render(){
+  const d=T[lang];
+  document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-t]").forEach(el=>el.textContent=d[el.dataset.t]);
+  $("#lang").textContent=lang==="ar"?"English":"العربية";
+  $("#tiles").innerHTML=PKGS.map(p=>{
+    const name=d["p"+p.n];
+    const link="https://wa.me/"+PHONE+"?text="+encodeURIComponent(d.msg(name+" — "+p.price+" "+d.jod));
+    return `<div class="tile"><div class="im"><img src="assets/images/${p.img}" alt="${name}" loading="lazy"></div><div><h3>${name}</h3><small>${d.pn}</small><div class="price">${p.price} ${d.jod}<s>${p.old} ${d.jod}</s></div><a class="btn" href="${link}" target="_blank" rel="noopener">${d.order}</a></div></div>`;
+  }).join("");
+  const wa="https://wa.me/"+PHONE;
+  $("#wa").href=wa;$("#waF").href=wa;
+  try{localStorage.setItem("a1_lang",lang)}catch(e){}
+}
+$("#lang").onclick=()=>{lang=lang==="ar"?"en":"ar";render()};
+$("#y").textContent=new Date().getFullYear();
+render();
+</script>
 </body>
 </html>
